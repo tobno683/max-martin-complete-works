@@ -20,6 +20,8 @@
 <div class="action-bar">
   <div class="header-actions">
     <button id="triviaBtn" class="btn btn-accent">✨ Fun facts about Max</button>
+    <button id="interviewsBtn" class="btn btn-secondary">🎙️ Interviews</button>
+    <button id="julietBtn" class="btn btn-secondary">🎭 &amp; Juliet Worldwide</button>
     <button id="themeBtn" class="btn btn-icon" title="Toggle theme" aria-label="Toggle theme">🌙</button>
   </div>
 </div>
@@ -85,8 +87,30 @@
   </div>
 </div>
 
+<!-- Interviews modal -->
+<div class="modal-overlay" id="interviewsModalOverlay" hidden>
+  <div class="modal modal-wide" id="interviewsModal" role="dialog" aria-modal="true">
+    <button class="modal-close" id="interviewsModalClose" aria-label="Close">✕</button>
+    <h2>🎙️ Interviews</h2>
+    <p class="modal-sub">Max Martin almost never speaks publicly — here are the genuine ones that exist, video, radio, and written.</p>
+    <div class="interviews-grid" id="interviewsList"></div>
+  </div>
+</div>
+
+<!-- & Juliet modal -->
+<div class="modal-overlay" id="julietModalOverlay" hidden>
+  <div class="modal modal-wide" id="julietModal" role="dialog" aria-modal="true">
+    <button class="modal-close" id="julietModalClose" aria-label="Close">✕</button>
+    <h2>🎭 &amp; Juliet — Around the World</h2>
+    <p class="modal-sub">The jukebox musical built from Max Martin's songbook, and where it's played.</p>
+    <div id="julietBody"></div>
+  </div>
+</div>
+
 <script src="data.js"></script>
 <script src="spotify-credits.js"></script>
+<script src="interviews.js"></script>
+<script src="juliet.js"></script>
 <script src="app.js"></script>
 </body>
 </html>

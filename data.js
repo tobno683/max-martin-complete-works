@@ -197,7 +197,7 @@ const MAX_MARTIN_SONGS = [
 {t:"Whataya Want from Me",a:"Pink",y:2008,alb:"Funhouse (unreleased Pink version)",role:["Writer"],collab:["Pink","Shellback"],trivia:"Pink recorded this first but shelved it; Adam Lambert released it in 2009 and it became one of his signature hits."},
 {t:"Identified",a:"Vanessa Hudgens",y:2008,alb:"Identified",role:["Writer"],collab:["Dr. Luke","Cathy Dennis"]},
 {t:"Unbreakable Heart",a:"Sugababes",y:2008,alb:"Catfights and Spotlights",role:["Writer"],collab:["Klas Åhlund"]},
-{t:"If U Seek Amy",a:"Britney Spears",y:2008,alb:"Circus",role:["Writer"],collab:["Shellback","Savan Kotecha","Alexander Kronlund"],trivia:"Its title is a well-known double entendre when the hook is sung phonetically ('F-U-C-K me') — the wordplay caused radio controversy."},
+{t:"If U Seek Amy",a:"Britney Spears",y:2008,alb:"Circus",role:["Writer"],collab:["Shellback","Savan Kotecha","Alexander Kronlund"],trivia:"Its title is a well-known phonetic wordplay on the sung hook, which drew radio and parental-advocacy pushback on release."},
 // ---- 2009 ----
 {t:"My Life Would Suck Without You",a:"Kelly Clarkson",y:2009,alb:"All I Ever Wanted",role:["Writer"],collab:["Dr. Luke","Claude Kelly"]},
 {t:"Hologram",a:"Dean",y:2009,alb:"Desire",role:["Writer"],collab:["Tony Cornelissen","Per Aldeheim"]},
@@ -565,7 +565,6 @@ const MAX_MARTIN_TRIVIA = [
 "He co-wrote nearly the entire Taylor Swift album 1989 (2014) and later re-recorded almost all of those songs again for 1989 (Taylor's Version) in 2023.",
 "& Juliet, a jukebox musical built around dozens of songs Max Martin wrote or co-wrote, debuted in London's West End in 2019 and later moved to Broadway.",
 "He occasionally releases music as a performing artist himself under the name 'Max Martin' — including 'Red Lights' (2022), put out to demo Apple's StemDrop technology.",
-"As of a 2017 Variety report, his personal net worth was estimated at roughly $260 million, with his production company earning about $54 million a year.",
 "He splits his time between Los Angeles and Stockholm, and still records at Maratone/MXM studios in both cities.",
 "'Roar' (Katy Perry, 2013) faced public comparisons to Sara Bareilles' 'Brave,' released just months earlier — both songs share a similar chord/melodic feel, though neither camp pursued legal action.",
 ];

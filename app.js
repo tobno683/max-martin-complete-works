@@ -20,6 +20,15 @@
   const triviaList = document.getElementById('triviaList');
 
   const themeBtn = document.getElementById('themeBtn');
+  const interviewsList = document.getElementById('interviewsList');
+  const interviewsBtn = document.getElementById('interviewsBtn');
+  const interviewsModalOverlay = document.getElementById('interviewsModalOverlay');
+  const interviewsModalClose = document.getElementById('interviewsModalClose');
+
+  const julietBtn = document.getElementById('julietBtn');
+  const julietModalOverlay = document.getElementById('julietModalOverlay');
+  const julietModalClose = document.getElementById('julietModalClose');
+  const julietBody = document.getElementById('julietBody');
 
   // ---- Theme ----
   function applyTheme(theme) {
@@ -27,8 +36,8 @@
     themeBtn.textContent = theme === 'dark' ? '☀️' : '🌙';
     try { localStorage.setItem('mm-theme', theme); } catch (e) {}
   }
-  let savedTheme = 'light';
-  try { savedTheme = localStorage.getItem('mm-theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'); } catch (e) {}
+  let savedTheme = 'dark';
+  try { savedTheme = localStorage.getItem('mm-theme') || 'dark'; } catch (e) {}
   applyTheme(savedTheme);
   themeBtn.addEventListener('click', () => {
     const cur = document.documentElement.getAttribute('data-theme');
@@ -241,8 +250,60 @@
   triviaModalOverlay.addEventListener('click', e => { if (e.target === triviaModalOverlay) closeTriviaModal(); });
 
   document.addEventListener('keydown', e => {
-    if (e.key === 'Escape') { closeSongModal(); closeTriviaModal(); }
+    if (e.key === 'Escape') { closeSongModal(); closeTriviaModal(); closeInterviewsModal(); closeJulietModal(); }
   });
+
+  // ---- Interviews ----
+  const TYPE_ICON = { Video: '▶', Radio: '📻', Written: '📰' };
+  function renderInterviews() {
+    if (!interviewsList || typeof MAX_MARTIN_INTERVIEWS === 'undefined') return;
+    interviewsList.innerHTML = MAX_MARTIN_INTERVIEWS.map(iv => `
+      <a class="interview-card" href="${escapeHtml(iv.url)}" target="_blank" rel="noopener noreferrer">
+        <div class="interview-service">
+          <span class="interview-type-icon type-${iv.type.toLowerCase()}">${TYPE_ICON[iv.type] || '🔗'}</span>
+          <span class="interview-service-name">${escapeHtml(iv.service)}</span>
+          <span class="interview-type-label">${escapeHtml(iv.type)}</span>
+        </div>
+        <div class="interview-title">${escapeHtml(iv.title)}</div>
+        <div class="interview-meta">${escapeHtml(iv.outlet)} · ${iv.year}</div>
+        ${iv.note ? `<div class="interview-note">${escapeHtml(iv.note)}</div>` : ''}
+      </a>
+    `).join('');
+  }
+  function openInterviewsModal() { interviewsModalOverlay.hidden = false; }
+  function closeInterviewsModal() { interviewsModalOverlay.hidden = true; }
+  interviewsBtn.addEventListener('click', () => { renderInterviews(); openInterviewsModal(); });
+  interviewsModalClose.addEventListener('click', closeInterviewsModal);
+  interviewsModalOverlay.addEventListener('click', e => { if (e.target === interviewsModalOverlay) closeInterviewsModal(); });
+
+  // ---- & Juliet ----
+  function renderJuliet() {
+    if (!julietBody || typeof MAX_MARTIN_JULIET === 'undefined') return;
+    const j = MAX_MARTIN_JULIET;
+    julietBody.innerHTML = `
+      <p class="juliet-intro">${escapeHtml(j.intro)}</p>
+      ${j.officialUrl ? `<a href="${escapeHtml(j.officialUrl)}" target="_blank" rel="noopener noreferrer" class="juliet-link juliet-link-top">Official worldwide site →</a>` : ''}
+      <div class="juliet-grid">
+        ${j.productions.map(p => `
+          <div class="juliet-card">
+            <div class="juliet-card-top">
+              ${p.url
+                ? `<a class="juliet-place" href="${escapeHtml(p.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(p.place)}</a>`
+                : `<span class="juliet-place">${escapeHtml(p.place)}</span>`}
+              <span class="juliet-status juliet-status-${p.status}">${escapeHtml(p.statusLabel)}</span>
+            </div>
+            <div class="juliet-venue">${escapeHtml(p.venue)}</div>
+            <div class="juliet-dates">${escapeHtml(p.dates)}</div>
+          </div>
+        `).join('')}
+      </div>
+    `;
+  }
+  function openJulietModal() { renderJuliet(); julietModalOverlay.hidden = false; }
+  function closeJulietModal() { julietModalOverlay.hidden = true; }
+  julietBtn.addEventListener('click', openJulietModal);
+  julietModalClose.addEventListener('click', closeJulietModal);
+  julietModalOverlay.addEventListener('click', e => { if (e.target === julietModalOverlay) closeJulietModal(); });
 
   // ---- Wire up controls ----
   searchInput.addEventListener('input', render);
