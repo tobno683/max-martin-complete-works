@@ -168,15 +168,21 @@ a { color: var(--accent-2); }
 main#library { max-width: 1100px; margin: 0.5rem auto 3rem; padding: 0 1.5rem; }
 
 .group-section { margin-top: 2.25rem; }
+.group-heading-wrap { margin: 0 0 1rem; }
 .group-heading {
+  font: inherit;
   font-size: 1.3rem;
+  color: inherit;
+  background: none;
+  border: none;
   border-bottom: 2px solid var(--accent);
   display: inline-flex;
   align-items: center;
-  padding-bottom: 0.15rem;
-  margin: 0 0 1rem;
+  padding: 0 0 0.15rem;
+  margin: 0;
   cursor: pointer;
   user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
 .group-count { color: var(--text-dim); font-size: 0.85rem; font-weight: normal; margin-left: 0.5rem; }
 .group-toggle {

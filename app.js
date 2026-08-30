@@ -149,10 +149,14 @@
       const section = document.createElement('section');
       section.className = 'group-section';
 
-      const heading = document.createElement('h2');
+      const headingWrap = document.createElement('h2');
+      headingWrap.className = 'group-heading-wrap';
+      const heading = document.createElement('button');
+      heading.type = 'button';
       heading.className = 'group-heading';
       heading.innerHTML = `<span class="group-toggle">▾</span>${key}<span class="group-count">${items.length} song${items.length === 1 ? '' : 's'}</span>`;
-      section.appendChild(heading);
+      headingWrap.appendChild(heading);
+      section.appendChild(headingWrap);
 
       const grid = document.createElement('div');
       grid.className = 'song-grid';
