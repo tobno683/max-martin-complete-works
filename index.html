@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Max Martin — The Complete Works</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <div class="title-block">
+      <h1><img src="assets/max-martin-logov2.png" alt="" class="logo-icon"> Max Martin <span class="dim">— The Complete Works</span></h1>
+      <p class="subtitle">Every song he's written, produced, or performed — from Cheiron Studios in 1991 to today.</p>
+    </div>
+  </div>
+</header>
+
+<div class="action-bar">
+  <div class="header-actions">
+    <button id="triviaBtn" class="btn btn-accent">✨ Fun facts about Max</button>
+    <button id="themeBtn" class="btn btn-icon" title="Toggle theme" aria-label="Toggle theme">🌙</button>
+  </div>
+</div>
+
+<div class="stats-bar" id="statsBar"></div>
+
+<div class="controls">
+  <div class="control-group">
+    <label for="searchInput">Search</label>
+    <input type="search" id="searchInput" placeholder="Song, artist, or collaborator…">
+  </div>
+  <div class="control-group">
+    <label for="groupSelect">Group by</label>
+    <select id="groupSelect">
+      <option value="year">Year</option>
+      <option value="artist">Artist</option>
+    </select>
+  </div>
+  <div class="control-group">
+    <label for="orderSelect">Order</label>
+    <select id="orderSelect">
+      <option value="desc">Newest first / A→Z</option>
+      <option value="asc">Oldest first / Z→A</option>
+    </select>
+  </div>
+  <div class="control-group checkbox-group">
+    <label><input type="checkbox" id="triviaOnly"> Only songs with trivia</label>
+  </div>
+</div>
+
+<main id="library"></main>
+
+<div class="empty-state" id="emptyState" hidden>No songs match your search.</div>
+
+<footer class="site-footer">
+  <p>Fan-made archive compiled from public discography data (Wikipedia). Not affiliated with Max Martin, MXM, or Wolf Cousins.</p>
+</footer>
+
+<!-- Song detail modal -->
+<div class="modal-overlay" id="songModalOverlay" hidden>
+  <div class="modal" id="songModal" role="dialog" aria-modal="true">
+    <button class="modal-close" id="songModalClose" aria-label="Close">✕</button>
+    <div id="songModalBody"></div>
+  </div>
+</div>
+
+<!-- Trivia modal -->
+<div class="modal-overlay" id="triviaModalOverlay" hidden>
+  <div class="modal" id="triviaModal" role="dialog" aria-modal="true">
+    <button class="modal-close" id="triviaModalClose" aria-label="Close">✕</button>
+    <h2>✨ Fun facts about Max Martin</h2>
+    <p class="modal-sub">Karl Martin Sandberg — the man behind the hits</p>
+    <ul id="triviaList" class="trivia-list"></ul>
+  </div>
+</div>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
