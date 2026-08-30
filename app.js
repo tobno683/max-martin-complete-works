@@ -8,6 +8,7 @@
   const groupSelect = document.getElementById('groupSelect');
   const orderSelect = document.getElementById('orderSelect');
   const roleSelect = document.getElementById('roleSelect');
+  const peakSelect = document.getElementById('peakSelect');
   const triviaOnly = document.getElementById('triviaOnly');
 
   const songModalOverlay = document.getElementById('songModalOverlay');
@@ -63,12 +64,19 @@
     }).join('');
   }
 
+  function peakBadge(peak) {
+    if (!peak) return '';
+    const cls = peak === 1 ? 'badge badge-peak badge-peak-1' : 'badge badge-peak';
+    return `<span class="${cls}" title="Billboard Hot 100 peak position">#${peak}</span>`;
+  }
+
   // ---- Filtering ----
   function getFiltered() {
     const q = searchInput.value.trim().toLowerCase();
     return songs.filter(s => {
       if (triviaOnly.checked && !s.trivia) return false;
       if (roleSelect.value && !s.role.includes(roleSelect.value)) return false;
+      if (peakSelect.value && !(s.peak && s.peak <= Number(peakSelect.value))) return false;
       if (!q) return true;
       const hay = [s.t, s.a, s.alb, ...(s.collab || [])].join(' ').toLowerCase();
       return hay.includes(q);
@@ -151,13 +159,13 @@
 
       items.forEach(s => {
         const card = document.createElement('button');
-        card.className = 'song-card';
+        card.className = 'song-card' + (s.peak === 1 ? ' song-card-number1' : '');
         card.type = 'button';
         card.innerHTML = `
           <div class="song-title">${escapeHtml(s.t)}</div>
           <div class="song-artist">${escapeHtml(s.a)}</div>
           <div class="song-meta">
-            <div class="badges">${roleBadges(s.role)}${s.trivia ? '<span class="badge badge-trivia">✨ trivia</span>' : ''}${getSpotifyCredits(s) ? '<span class="badge badge-spotify">🎧 full credits</span>' : ''}</div>
+            <div class="badges">${peakBadge(s.peak)}${roleBadges(s.role)}${s.trivia ? '<span class="badge badge-trivia">✨ trivia</span>' : ''}${getSpotifyCredits(s) ? '<span class="badge badge-spotify">🎧 full credits</span>' : ''}</div>
             <div class="song-year">${s.y}</div>
           </div>
         `;
@@ -217,10 +225,14 @@
         ${escapeHtml(s.alb || '—')}
       </div>
       <div class="detail-row">
+        <span class="label">Billboard Hot 100 peak</span>
+        ${s.peak ? `#${s.peak}` : 'Did not chart / not a Hot 100 single'}
+      </div>
+      <div class="detail-row">
         <span class="label">Collaborators</span>
         ${collabHtml}
       </div>
-      ${s.trivia ? `<div class="trivia-box">🎶 ${escapeHtml(s.trivia)}</div>` : ''}
+      ${s.trivia ? `<div class="trivia-box">🎶 ${escapeHtml(s.trivia)}${s.source ? ` <a class="trivia-source-link" href="${escapeHtml(s.source)}" target="_blank" rel="noopener noreferrer">Source →</a>` : ''}</div>` : ''}
       ${spotifyHtml}
     `;
 
@@ -241,7 +253,12 @@
 
   // ---- Trivia modal ----
   function renderTrivia() {
-    triviaList.innerHTML = MAX_MARTIN_TRIVIA.map(t => `<li>${escapeHtml(t)}</li>`).join('');
+    triviaList.innerHTML = MAX_MARTIN_TRIVIA.map(t => {
+      const text = escapeHtml(t.text);
+      return t.source
+        ? `<li><a class="trivia-link" href="${escapeHtml(t.source)}" target="_blank" rel="noopener noreferrer">${text}</a></li>`
+        : `<li>${text}</li>`;
+    }).join('');
   }
   function openTriviaModal() { triviaModalOverlay.hidden = false; }
   function closeTriviaModal() { triviaModalOverlay.hidden = true; }
@@ -310,6 +327,7 @@
   groupSelect.addEventListener('change', render);
   orderSelect.addEventListener('change', render);
   roleSelect.addEventListener('change', render);
+  peakSelect.addEventListener('change', render);
   triviaOnly.addEventListener('change', render);
 
   // ---- Init ----

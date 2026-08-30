@@ -4832,4 +4832,850 @@ const MAX_MARTIN_SPOTIFY_CREDITS = {
   },
   "source": "Jive"
  }
+,
+ "It's Gonna Be Me · *NSYNC": {
+  "sections": {
+   "Composition & Lyrics": [
+    {
+     "name": "Max Martin",
+     "roles": [
+      "Composer",
+      "Lyricist"
+     ]
+    },
+    {
+     "name": "Rami Yacoub",
+     "roles": [
+      "Composer",
+      "Lyricist"
+     ]
+    },
+    {
+     "name": "Andreas Carlsson",
+     "roles": [
+      "Composer",
+      "Lyricist"
+     ]
+    }
+   ],
+   "Production & Engineering": [
+    {
+     "name": "Rami Yacoub",
+     "roles": [
+      "Producer"
+     ]
+    },
+    {
+     "name": "Chris Trevett",
+     "roles": [
+      "Recording Engineer"
+     ]
+    },
+    {
+     "name": "Charles McCrorey",
+     "roles": [
+      "Assistant Engineer"
+     ]
+    },
+    {
+     "name": "John Amatiello",
+     "roles": [
+      "Engineer"
+     ]
+    }
+   ],
+   "Performers": [
+    {
+     "name": "Justin Timberlake",
+     "roles": [
+      "Beat Boxing"
+     ]
+    }
+   ]
+  },
+  "source": "Jive"
+ },
+ "3 · Britney Spears": {
+  "sections": {
+   "Composition & Lyrics": [
+    {
+     "name": "Max Martin",
+     "roles": [
+      "Composer",
+      "Lyricist"
+     ]
+    },
+    {
+     "name": "Shellback",
+     "roles": [
+      "Composer",
+      "Lyricist"
+     ]
+    },
+    {
+     "name": "Tiffany Amber",
+     "roles": [
+      "Composer",
+      "Lyricist"
+     ]
+    }
+   ],
+   "Production & Engineering": [
+    {
+     "name": "Max Martin",
+     "roles": [
+      "Engineer",
+      "Producer"
+     ]
+    },
+    {
+     "name": "Shellback",
+     "roles": [
+      "Engineer",
+      "Producer"
+     ]
+    },
+    {
+     "name": "Serban Ghenea",
+     "roles": [
+      "Mixing Engineer"
+     ]
+    },
+    {
+     "name": "John Hanes",
+     "roles": [
+      "Producer"
+     ]
+    },
+    {
+     "name": "Tim Roberts",
+     "roles": [
+      "Assistant Engineer"
+     ]
+    }
+   ],
+   "Performers": [
+    {
+     "name": "Max Martin",
+     "roles": [
+      "Keyboards"
+     ]
+    },
+    {
+     "name": "Shellback",
+     "roles": [
+      "Guitar",
+      "Keyboards"
+     ]
+    }
+   ]
+  },
+  "source": "Jive/Legacy"
+ },
+ "Last Friday Night (T.G.I.F.) · Katy Perry": {
+  "sections": {
+   "Composition & Lyrics": [
+    {
+     "name": "Max Martin",
+     "roles": [
+      "Composer",
+      "Lyricist"
+     ]
+    },
+    {
+     "name": "Katy Perry",
+     "roles": [
+      "Composer",
+      "Lyricist"
+     ]
+    },
+    {
+     "name": "Łukasz Gottwald",
+     "roles": [
+      "Composer",
+      "Lyricist"
+     ]
+    },
+    {
+     "name": "Bonnie McKee",
+     "roles": [
+      "Composer",
+      "Lyricist"
+     ]
+    }
+   ],
+   "Production & Engineering": [
+    {
+     "name": "Dr. Luke",
+     "roles": [
+      "Producer"
+     ]
+    },
+    {
+     "name": "Max Martin",
+     "roles": [
+      "Producer"
+     ]
+    }
+   ]
+  },
+  "source": "Capitol Records"
+ },
+ "E.T. · Katy Perry": {
+  "sections": {
+   "Composition & Lyrics": [
+    {
+     "name": "Max Martin",
+     "roles": [
+      "Composer",
+      "Lyricist"
+     ]
+    },
+    {
+     "name": "Katy Perry",
+     "roles": [
+      "Composer",
+      "Lyricist"
+     ]
+    },
+    {
+     "name": "Łukasz Gottwald",
+     "roles": [
+      "Composer",
+      "Lyricist"
+     ]
+    },
+    {
+     "name": "Joshua Coleman",
+     "roles": [
+      "Composer",
+      "Lyricist"
+     ]
+    }
+   ],
+   "Production & Engineering": [
+    {
+     "name": "Dr. Luke",
+     "roles": [
+      "Producer"
+     ]
+    },
+    {
+     "name": "Max Martin",
+     "roles": [
+      "Producer"
+     ]
+    }
+   ]
+  },
+  "source": "Capitol Records"
+ },
+ "Part of Me · Katy Perry": {
+  "sections": {
+   "Composition & Lyrics": [
+    {
+     "name": "Max Martin",
+     "roles": [
+      "Composer",
+      "Lyricist"
+     ]
+    },
+    {
+     "name": "Katy Perry",
+     "roles": [
+      "Composer",
+      "Lyricist"
+     ]
+    },
+    {
+     "name": "Łukasz Gottwald",
+     "roles": [
+      "Composer",
+      "Lyricist"
+     ]
+    },
+    {
+     "name": "Bonnie McKee",
+     "roles": [
+      "Composer",
+      "Lyricist"
+     ]
+    }
+   ],
+   "Production & Engineering": [
+    {
+     "name": "Dr. Luke",
+     "roles": [
+      "Producer"
+     ]
+    },
+    {
+     "name": "Max Martin",
+     "roles": [
+      "Producer"
+     ]
+    },
+    {
+     "name": "Cirkut",
+     "roles": [
+      "Producer"
+     ]
+    }
+   ]
+  },
+  "source": "Capitol Records"
+ },
+ "One More Night · Maroon 5": {
+  "sections": {
+   "Composition & Lyrics": [
+    {
+     "name": "Max Martin",
+     "roles": [
+      "Composer",
+      "Lyricist"
+     ]
+    },
+    {
+     "name": "Shellback",
+     "roles": [
+      "Composer",
+      "Lyricist"
+     ]
+    },
+    {
+     "name": "Adam Levine",
+     "roles": [
+      "Composer",
+      "Lyricist"
+     ]
+    },
+    {
+     "name": "Savan Kotecha",
+     "roles": [
+      "Composer",
+      "Lyricist"
+     ]
+    }
+   ],
+   "Production & Engineering": [
+    {
+     "name": "Max Martin",
+     "roles": [
+      "Producer"
+     ]
+    },
+    {
+     "name": "Shellback",
+     "roles": [
+      "Producer"
+     ]
+    },
+    {
+     "name": "Serban Ghenea",
+     "roles": [
+      "Mixing Engineer"
+     ]
+    },
+    {
+     "name": "John Hanes",
+     "roles": [
+      "Engineer"
+     ]
+    }
+   ]
+  },
+  "source": "Interscope Records*"
+ },
+ "Yes, And? · Ariana Grande": {
+  "sections": {
+   "Composition & Lyrics": [
+    {
+     "name": "Max Martin",
+     "roles": [
+      "Composer",
+      "Lyricist"
+     ]
+    },
+    {
+     "name": "Ariana Grande",
+     "roles": [
+      "Composer",
+      "Lyricist"
+     ]
+    },
+    {
+     "name": "Ilya Salmanzadeh",
+     "roles": [
+      "Composer",
+      "Lyricist"
+     ]
+    }
+   ],
+   "Production & Engineering": [
+    {
+     "name": "Max Martin",
+     "roles": [
+      "Producer"
+     ]
+    },
+    {
+     "name": "ILYA",
+     "roles": [
+      "Producer"
+     ]
+    },
+    {
+     "name": "Ariana Grande",
+     "roles": [
+      "Producer"
+     ]
+    },
+    {
+     "name": "Serban Ghenea",
+     "roles": [
+      "Studio Personnel",
+      "Mixer"
+     ]
+    },
+    {
+     "name": "Bryce Bordone",
+     "roles": [
+      "Studio Personnel",
+      "Assistant Mixer"
+     ]
+    },
+    {
+     "name": "Sam Holland",
+     "roles": [
+      "Studio Personnel",
+      "Engineer"
+     ]
+    },
+    {
+     "name": "Lou Carrao",
+     "roles": [
+      "Studio Personnel",
+      "Engineer"
+     ]
+    },
+    {
+     "name": "Eric Eylands",
+     "roles": [
+      "Studio Personnel",
+      "Asst. Recording Engineer"
+     ]
+    },
+    {
+     "name": "Randy Merrill",
+     "roles": [
+      "Studio Personnel",
+      "Mastering Engineer"
+     ]
+    },
+    {
+     "name": "Rob Sellens",
+     "roles": [
+      "Studio Personnel",
+      "Asst. Recording Engineer"
+     ]
+    }
+   ],
+   "Performers": [
+    {
+     "name": "Max Martin",
+     "roles": [
+      "Background Vocalist",
+      "Bass",
+      "Drums",
+      "Keyboards",
+      "Programming"
+     ]
+    },
+    {
+     "name": "ILYA",
+     "roles": [
+      "Background Vocalist",
+      "Bass",
+      "Drums",
+      "Keyboards",
+      "Piano",
+      "Programming"
+     ]
+    },
+    {
+     "name": "Ariana Grande",
+     "roles": [
+      "Vocalist",
+      "Background Vocalist"
+     ]
+    }
+   ],
+   "Other Roles": [
+    {
+     "name": "Wendy Goldstein",
+     "roles": [
+      "A&R"
+     ]
+    },
+    {
+     "name": "Kristina Grossmann",
+     "roles": [
+      "A&R"
+     ]
+    }
+   ]
+  },
+  "source": "Republic Records"
+ },
+ "The Fate of Ophelia · Taylor Swift": {
+  "sections": {
+   "Composition & Lyrics": [
+    {
+     "name": "Max Martin",
+     "roles": [
+      "Composer",
+      "Lyricist"
+     ]
+    },
+    {
+     "name": "Shellback",
+     "roles": [
+      "Composer",
+      "Lyricist"
+     ]
+    },
+    {
+     "name": "Taylor Swift",
+     "roles": [
+      "Composer",
+      "Lyricist"
+     ]
+    }
+   ],
+   "Production & Engineering": [
+    {
+     "name": "Max Martin",
+     "roles": [
+      "Producer",
+      "Recording Engineer"
+     ]
+    },
+    {
+     "name": "Shellback",
+     "roles": [
+      "Producer",
+      "Recording Engineer"
+     ]
+    },
+    {
+     "name": "Taylor Swift",
+     "roles": [
+      "Producer"
+     ]
+    },
+    {
+     "name": "Serban Ghenea",
+     "roles": [
+      "Mixing Engineer"
+     ]
+    },
+    {
+     "name": "Bryce Bordone",
+     "roles": [
+      "Mixing Second Engineer"
+     ]
+    },
+    {
+     "name": "Lasse Mårtén",
+     "roles": [
+      "Engineer",
+      "Recording Engineer"
+     ]
+    },
+    {
+     "name": "Randy Merrill",
+     "roles": [
+      "Mastering Engineer"
+     ]
+    },
+    {
+     "name": "Ryan Smith",
+     "roles": [
+      "Mastering Engineer"
+     ]
+    }
+   ],
+   "Performers": [
+    {
+     "name": "Max Martin",
+     "roles": [
+      "Programmer",
+      "Piano",
+      "Keyboard"
+     ]
+    },
+    {
+     "name": "Shellback",
+     "roles": [
+      "Programmer",
+      "Drum Kit",
+      "Keyboard",
+      "Guitar",
+      "Bass",
+      "Omnichord",
+      "Percussion"
+     ]
+    },
+    {
+     "name": "Taylor Swift",
+     "roles": [
+      "Vocalist"
+     ]
+    },
+    {
+     "name": "Anders Pettersson",
+     "roles": [
+      "Pedal Steel Guitar"
+     ]
+    }
+   ]
+  },
+  "source": "Taylor Swift"
+ },
+ "Opalite · Taylor Swift": {
+  "sections": {
+   "Composition & Lyrics": [
+    {
+     "name": "Max Martin",
+     "roles": [
+      "Composer",
+      "Lyricist"
+     ]
+    },
+    {
+     "name": "Shellback",
+     "roles": [
+      "Composer",
+      "Lyricist"
+     ]
+    },
+    {
+     "name": "Taylor Swift",
+     "roles": [
+      "Composer",
+      "Lyricist"
+     ]
+    }
+   ],
+   "Production & Engineering": [
+    {
+     "name": "Max Martin",
+     "roles": [
+      "Producer",
+      "Recording Engineer"
+     ]
+    },
+    {
+     "name": "Shellback",
+     "roles": [
+      "Producer",
+      "Recording Engineer"
+     ]
+    },
+    {
+     "name": "Taylor Swift",
+     "roles": [
+      "Producer"
+     ]
+    },
+    {
+     "name": "Serban Ghenea",
+     "roles": [
+      "Mixing Engineer"
+     ]
+    },
+    {
+     "name": "Bryce Bordone",
+     "roles": [
+      "Mixing Second Engineer"
+     ]
+    },
+    {
+     "name": "Lasse Mårtén",
+     "roles": [
+      "Engineer",
+      "Recording Engineer"
+     ]
+    },
+    {
+     "name": "Randy Merrill",
+     "roles": [
+      "Mastering Engineer"
+     ]
+    },
+    {
+     "name": "Ryan Smith",
+     "roles": [
+      "Mastering Engineer"
+     ]
+    }
+   ],
+   "Performers": [
+    {
+     "name": "Max Martin",
+     "roles": [
+      "Programmer",
+      "Keyboard",
+      "Hand Claps"
+     ]
+    },
+    {
+     "name": "Shellback",
+     "roles": [
+      "Programmer",
+      "Drum Kit",
+      "Keyboard",
+      "Guitar",
+      "Bass",
+      "Omnichord",
+      "Percussion",
+      "Hand Claps"
+     ]
+    },
+    {
+     "name": "Taylor Swift",
+     "roles": [
+      "Vocalist",
+      "Hand Claps"
+     ]
+    }
+   ]
+  },
+  "source": "Taylor Swift"
+ },
+ "Hate That I Made You Love Me · Ariana Grande": {
+  "sections": {
+   "Composition & Lyrics": [
+    {
+     "name": "Ariana Grande",
+     "roles": [
+      "Recording Arranger",
+      "Composer",
+      "Lyricist"
+     ]
+    },
+    {
+     "name": "ILYA",
+     "roles": [
+      "Recording Arranger"
+     ]
+    },
+    {
+     "name": "Max Martin",
+     "roles": [
+      "Recording Arranger",
+      "Composer"
+     ]
+    },
+    {
+     "name": "Ilya Salmanzadeh",
+     "roles": [
+      "Composer"
+     ]
+    }
+   ],
+   "Production & Engineering": [
+    {
+     "name": "Ariana Grande",
+     "roles": [
+      "Producer",
+      "Vocal Producer",
+      "Engineer"
+     ]
+    },
+    {
+     "name": "ILYA",
+     "roles": [
+      "Producer",
+      "Vocal Producer",
+      "Engineer"
+     ]
+    },
+    {
+     "name": "Max Martin",
+     "roles": [
+      "Producer",
+      "Vocal Producer",
+      "Engineer"
+     ]
+    },
+    {
+     "name": "Lou Carrao",
+     "roles": [
+      "Engineer"
+     ]
+    },
+    {
+     "name": "Juan Arguello",
+     "roles": [
+      "Engineer"
+     ]
+    },
+    {
+     "name": "Jeremy Lertola",
+     "roles": [
+      "Engineer"
+     ]
+    },
+    {
+     "name": "Serban Ghenea",
+     "roles": [
+      "Mixing Engineer"
+     ]
+    },
+    {
+     "name": "Bryce Bordone",
+     "roles": [
+      "Mixing Second Engineer"
+     ]
+    },
+    {
+     "name": "Randy Merrill",
+     "roles": [
+      "Mastering Engineer"
+     ]
+    }
+   ],
+   "Performers": [
+    {
+     "name": "Ariana Grande",
+     "roles": [
+      "Vocalist",
+      "Background Vocalist",
+      "Drum Kit"
+     ]
+    },
+    {
+     "name": "ILYA",
+     "roles": [
+      "Programmer",
+      "Drum Kit",
+      "Bass",
+      "Keyboard",
+      "Guitar"
+     ]
+    },
+    {
+     "name": "Max Martin",
+     "roles": [
+      "Programmer",
+      "Bass",
+      "Keyboard",
+      "Guitar"
+     ]
+    }
+   ]
+  },
+  "source": "Republic Records"
+ }
 };
