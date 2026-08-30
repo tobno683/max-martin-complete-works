@@ -206,6 +206,7 @@ main#library { max-width: 1100px; margin: 0.5rem auto 3rem; padding: 0 1.5rem; }
 .badge-producer { background: var(--badge-producer); color: var(--badge-producer-text); }
 .badge-artist { background: var(--badge-artist); color: var(--badge-artist-text); }
 .badge-trivia { background: var(--accent); color: #fff8f0; }
+.badge-spotify { background: var(--accent-2); color: #fff8f0; }
 
 .empty-state { text-align: center; color: var(--text-dim); padding: 3rem 1rem; }
 
@@ -274,6 +275,21 @@ main#library { max-width: 1100px; margin: 0.5rem auto 3rem; padding: 0 1.5rem; }
   border-radius: 0 8px 8px 0;
   font-size: 0.92rem;
 }
+
+.spotify-box {
+  margin-top: 1rem;
+  background: var(--bg);
+  border-left: 3px solid var(--accent-2);
+  padding: 0.8rem 1rem;
+  border-radius: 0 8px 8px 0;
+}
+.spotify-box-heading { font-weight: bold; font-size: 0.92rem; margin-bottom: 0.6rem; }
+.spotify-section { margin-top: 0.7rem; }
+.spotify-section:first-of-type { margin-top: 0; }
+.spotify-people { list-style: none; padding: 0; margin: 0.3rem 0 0; display: flex; flex-direction: column; gap: 0.25rem; }
+.spotify-people li { display: flex; justify-content: space-between; gap: 0.75rem; font-size: 0.85rem; flex-wrap: wrap; }
+.spotify-people strong { font-weight: 600; }
+.spotify-roles { color: var(--text-dim); font-size: 0.8rem; text-align: right; }
 
 .trivia-list { list-style: none; padding: 0; margin: 1rem 0 0; display: flex; flex-direction: column; gap: 0.9rem; }
 .trivia-list li {

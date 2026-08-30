@@ -45,6 +45,15 @@
       <option value="asc">Oldest first / Z→A</option>
     </select>
   </div>
+  <div class="control-group">
+    <label for="roleSelect">Role</label>
+    <select id="roleSelect">
+      <option value="">All roles</option>
+      <option value="Writer">Writer</option>
+      <option value="Producer">Producer</option>
+      <option value="Artist">Artist</option>
+    </select>
+  </div>
   <div class="control-group checkbox-group">
     <label><input type="checkbox" id="triviaOnly"> Only songs with trivia</label>
   </div>
@@ -55,7 +64,7 @@
 <div class="empty-state" id="emptyState" hidden>No songs match your search.</div>
 
 <footer class="site-footer">
-  <p>Fan-made archive compiled from public discography data (Wikipedia). Not affiliated with Max Martin, MXM, or Wolf Cousins.</p>
+  <p>Fan-made archive compiled from public discography data (Wikipedia, ASCAP, Spotify). Not affiliated with Max Martin, MXM, or Wolf Cousins.</p>
 </footer>
 
 <!-- Song detail modal -->
@@ -77,6 +86,7 @@
 </div>
 
 <script src="data.js"></script>
+<script src="spotify-credits.js"></script>
 <script src="app.js"></script>
 </body>
 </html>

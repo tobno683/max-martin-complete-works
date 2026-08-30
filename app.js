@@ -7,6 +7,7 @@
   const searchInput = document.getElementById('searchInput');
   const groupSelect = document.getElementById('groupSelect');
   const orderSelect = document.getElementById('orderSelect');
+  const roleSelect = document.getElementById('roleSelect');
   const triviaOnly = document.getElementById('triviaOnly');
 
   const songModalOverlay = document.getElementById('songModalOverlay');
@@ -58,6 +59,7 @@
     const q = searchInput.value.trim().toLowerCase();
     return songs.filter(s => {
       if (triviaOnly.checked && !s.trivia) return false;
+      if (roleSelect.value && !s.role.includes(roleSelect.value)) return false;
       if (!q) return true;
       const hay = [s.t, s.a, s.alb, ...(s.collab || [])].join(' ').toLowerCase();
       return hay.includes(q);
@@ -146,7 +148,7 @@
           <div class="song-title">${escapeHtml(s.t)}</div>
           <div class="song-artist">${escapeHtml(s.a)}</div>
           <div class="song-meta">
-            <div class="badges">${roleBadges(s.role)}${s.trivia ? '<span class="badge badge-trivia">✨ trivia</span>' : ''}</div>
+            <div class="badges">${roleBadges(s.role)}${s.trivia ? '<span class="badge badge-trivia">✨ trivia</span>' : ''}${getSpotifyCredits(s) ? '<span class="badge badge-spotify">🎧 full credits</span>' : ''}</div>
             <div class="song-year">${s.y}</div>
           </div>
         `;
@@ -159,6 +161,31 @@
     });
   }
 
+  function getSpotifyCredits(s) {
+    if (typeof MAX_MARTIN_SPOTIFY_CREDITS === 'undefined') return null;
+    return MAX_MARTIN_SPOTIFY_CREDITS[`${s.t} · ${s.a}`] || null;
+  }
+
+  const SECTION_ORDER = ['Composition & Lyrics', 'Production & Engineering', 'Performers', 'Other Roles'];
+  function renderSpotifyCredits(credits) {
+    const sections = SECTION_ORDER
+      .filter(name => credits.sections[name] && credits.sections[name].length)
+      .map(name => `
+        <div class="spotify-section">
+          <span class="label">${escapeHtml(name)}</span>
+          <ul class="spotify-people">
+            ${credits.sections[name].map(p => `<li><strong>${escapeHtml(p.name)}</strong><span class="spotify-roles">${escapeHtml(p.roles.join(' · '))}</span></li>`).join('')}
+          </ul>
+        </div>
+      `).join('');
+    return `
+      <div class="spotify-box">
+        <div class="spotify-box-heading">🎧 Full Spotify credits${credits.source ? ` <span class="dim">— ${escapeHtml(credits.source)}</span>` : ''}</div>
+        ${sections}
+      </div>
+    `;
+  }
+
   function escapeHtml(str) {
     return String(str).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   }
@@ -168,6 +195,9 @@
     const collabHtml = (s.collab && s.collab.length)
       ? `<div class="collab-list">${s.collab.map(c => `<button class="collab-chip" data-name="${escapeHtml(c)}">${escapeHtml(c)}</button>`).join('')}</div>`
       : `<span class="dim">Solo credit — no other collaborators listed</span>`;
+
+    const spotify = getSpotifyCredits(s);
+    const spotifyHtml = spotify ? renderSpotifyCredits(spotify) : '';
 
     songModalBody.innerHTML = `
       <h2>${escapeHtml(s.t)}</h2>
@@ -182,6 +212,7 @@
         ${collabHtml}
       </div>
       ${s.trivia ? `<div class="trivia-box">🎶 ${escapeHtml(s.trivia)}</div>` : ''}
+      ${spotifyHtml}
     `;
 
     songModalBody.querySelectorAll('.collab-chip').forEach(chip => {
@@ -217,6 +248,7 @@
   searchInput.addEventListener('input', render);
   groupSelect.addEventListener('change', render);
   orderSelect.addEventListener('change', render);
+  roleSelect.addEventListener('change', render);
   triviaOnly.addEventListener('change', render);
 
   // ---- Init ----
