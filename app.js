@@ -12,6 +12,7 @@
   const triviaOnly = document.getElementById('triviaOnly');
 
   const songModalOverlay = document.getElementById('songModalOverlay');
+  const songModal = document.getElementById('songModal');
   const songModalBody = document.getElementById('songModalBody');
   const songModalClose = document.getElementById('songModalClose');
 
@@ -258,6 +259,10 @@
   function closeSongModal() { songModalOverlay.hidden = true; }
   songModalClose.addEventListener('click', closeSongModal);
   songModalOverlay.addEventListener('click', e => { if (e.target === songModalOverlay) closeSongModal(); });
+  songModal.addEventListener('click', e => {
+    if (e.target.closest('a, button, select, input')) return;
+    closeSongModal();
+  });
 
   // ---- Trivia modal ----
   function renderTrivia() {
