@@ -433,6 +433,7 @@ a.juliet-place:hover { text-decoration: underline; color: var(--accent-2); }
   .title-block h1 { font-size: 1.5rem; display: flex; align-items: center; }
   .title-block h1 .title-text { display: inline-block; }
   .title-block h1 .dim { display: block; margin-top: 0.2rem; }
+  .title-block h1 .title-dash { display: none; }
   .logo-icon { height: 3.5rem; margin-bottom: 0; }
   .header-inner { flex-direction: column; align-items: flex-start; }
   .modal { padding: 1.5rem; }
