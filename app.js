@@ -151,11 +151,15 @@
 
       const heading = document.createElement('h2');
       heading.className = 'group-heading';
-      heading.innerHTML = `${key}<span class="group-count">${items.length} song${items.length === 1 ? '' : 's'}</span>`;
+      heading.innerHTML = `<span class="group-toggle">▾</span>${key}<span class="group-count">${items.length} song${items.length === 1 ? '' : 's'}</span>`;
       section.appendChild(heading);
 
       const grid = document.createElement('div');
       grid.className = 'song-grid';
+
+      heading.addEventListener('click', () => {
+        section.classList.toggle('group-collapsed');
+      });
 
       items.forEach(s => {
         const card = document.createElement('button');
