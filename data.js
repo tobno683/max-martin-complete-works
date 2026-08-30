@@ -11,6 +11,9 @@
 const MAX_MARTIN_SONGS = [
 // ---- 1991 ----
 {t:"Sommarnatt",a:"Camilla",y:1991,alb:"non-album single",role:["Writer"],collab:["David Garpenståhl","Alexander Kronlund"]},
+// ---- 1993 ----
+{t:"Pretend I'm God",a:"It's Alive",y:1993,alb:"Earthquake Visions",role:["Writer","Artist"],collab:["Per Aldeheim","Kim Björkegren","Anders Gustavsson","Peter Kahm","Johan Rosth"],trivia:"From the one album by It's Alive, the glam-metal band Max Martin fronted as singer 'Martin White' before he became a producer — years before Cheiron, this is him as a performing artist in his own right."},
+{t:"Sing This Blues",a:"It's Alive",y:1993,alb:"Earthquake Visions",role:["Writer","Artist"],collab:["Per Aldeheim","Kim Björkegren","Anders Gustavsson","Peter Kahm","Johan Rosth"]},
 // ---- 1994 ----
 {t:"Me No Want Miseria",a:"E-Type",y:1994,alb:"Made in Sweden",role:["Writer"],collab:["Martin Eriksson","Herbie Crichlow"]},
 // ---- 1995 ----
@@ -84,7 +87,7 @@ const MAX_MARTIN_SONGS = [
 {t:"Shape of My Heart",a:"Backstreet Boys",y:2000,alb:"Black & Blue",role:["Writer"],collab:["Rami Yacoub","Lisa Miskovsky"]},
 {t:"Get Another Boyfriend",a:"Backstreet Boys",y:2000,alb:"Black & Blue",role:["Writer"],collab:["Rami Yacoub"]},
 {t:"It's True",a:"Backstreet Boys",y:2000,alb:"Black & Blue",role:["Writer"],collab:["Andreas Carlsson","Kevin Richardson"]},
-{t:"It's My Life",a:"Bon Jovi",y:2000,alb:"Crush",role:["Writer"],collab:["Jon Bon Jovi","Richie Sambora"],trivia:"Max Martin's first major rock co-write outside the Cheiron pop machine — proof his melodic sensibility could cross genres."},
+{t:"It's My Life",a:"Bon Jovi",y:2000,alb:"Crush",role:["Writer"],collab:["Jon Bon Jovi","Richie Sambora"],trivia:"Max Martin's first major rock co-write outside the Cheiron pop machine — proof his melodic sensibility could cross genres. After writing it with Bon Jovi and Sambora, Martin brought it home to Cheiron and produced a demo of it with Rami Yacoub — but by their own account, the demo leaned so hard into their usual polished pop style that it just didn't land as a rock song, and Yacoub has said they were harshly unimpressed with it themselves. Bon Jovi reworked the track with producer Luke Ebbin for the released version, which is why Martin and Yacoub's production isn't what ended up on the record, even though Martin kept his co-writing credit."},
 {t:"Oops!... I Did It Again",a:"Britney Spears",y:2000,alb:"Oops!... I Did It Again",role:["Writer","Producer"],collab:["Rami Yacoub"]},
 {t:"Stronger",a:"Britney Spears",y:2000,alb:"Oops!... I Did It Again",role:["Writer","Producer"],collab:["Rami Yacoub"]},
 {t:"Don't Go Knocking on My Door",a:"Britney Spears",y:2000,alb:"Oops!... I Did It Again",role:["Writer"],collab:["Rami Yacoub","Alexander Kronlund","Jacob \"Jake\" Schulze"]},
@@ -546,7 +549,7 @@ const MAX_MARTIN_SONGS = [
 const MAX_MARTIN_TRIVIA = [
 "His real name is Karl Martin Sandberg — 'Max Martin' was actually a nickname invented by E-Type and mentor Denniz PoP without his knowledge. He only found out when the printed records arrived with the new name on them.",
 "He was born February 26, 1971, in Stenhamra, a suburb of Stockholm, Sweden, to a police-officer father and a middle-school-teacher mother.",
-"Before pop stardom, he was the singer/frontman of the glam-metal band It's Alive in the late 1980s, performing under the stage name 'Martin White.' The band sold only around 30,000 copies of their one album.",
+"Before pop stardom, he was the singer/frontman of the glam-metal band It's Alive, formed in Stockholm in 1987, performing under the stage name 'Martin White.' Their one album, Earthquake Visions (1993), sold only around 30,000 copies before he left the band in 1995 to focus on production.",
 "He credits Sweden's free public music education program directly for his career, saying he has 'public music education to thank for everything.'",
 "Denniz PoP (Dag Volle) spotted his songwriting talent and mentored him at Cheiron Studios in Stockholm starting in 1993 — Cheiron became the pop hit factory behind Backstreet Boys, *NSYNC, and Britney Spears.",
 "Cheiron Studios closed in 2000 after Denniz PoP died of cancer at just 35; Martin later founded his own production house, Maratone, in January 2001.",
